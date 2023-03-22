@@ -1,10 +1,46 @@
+@font-face {
+  font-family: 'PTSans-Regular';
+  src: url('../src/fonts/PTSans-Regular.ttf');
+}
 body {
+  
+  
+ background: white;  
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'PTSans-Regular','Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  font-size: 2.5rem;
+  font-weight:lighter;
+  color: #1C6EA4; /* золотой цвет для заголовков и ссылок */
+}
+
+h2 {
+  font-size: 2.0rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+ 
+p {
+  color: #1C6EA4;  
+  font-size: 1.4rem;
+  line-height: 2;
+  
+}
+
+a {
+  
+  font-size: 1.4rem;
+  text-decoration: none;
 }
 
 code {

@@ -1,0 +1,99 @@
+.container {
+  margin: auto;
+    margin-top: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10%;
+    
+    border-top: 12px solid rgba(28,110,164,0.23);
+    border-radius: 16px 16px 0px 0px;
+   
+  }
+  p {
+    opacity: 1;
+  }
+  
+  .greeting {
+    text-align: center;
+    margin-bottom: 20px;
+    
+    z-index: 997;
+  }
+  
+  .greeting h1 {
+    
+    margin-bottom: 20px;
+  }
+  
+  .greeting p {
+    
+    
+    
+    max-width: 800px;
+  }
+  
+  .domains {
+    padding: 50px 150px;
+    border: 16px solid rgba(28,110,164,0.2);
+    text-align: center;
+  }
+  
+  .domains h2 {
+    
+    
+    margin-bottom: 20px;
+  }
+  
+  .domainList {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+  }
+  
+  .domainList a {
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid  #1C6EA4;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .domainList a:hover {
+    background-color: #0480fc;
+    color: #fff;
+  }
+  /* Мобильные устройства */
+  @media (max-width: 767px) {
+    .greeting h1 {
+      font-size: 1.8rem;
+    }
+  
+    .greeting p {
+      font-size: 1rem;
+    }
+  
+    .domains h2 {
+      font-size: 1.2rem;
+    }
+  
+    .domainList a {
+      font-size: 1.3rem;
+      padding: 5px 10px;
+    }
+  }
+  @media (max-width: 600px) {
+    .domainList {
+      
+      flex-direction: column;
+      justify-content: center;
+  }
+  .domains {
+    padding: 5px;
+    
+  }
+}

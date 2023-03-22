@@ -1,0 +1,30 @@
+.text-with-heading-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+   
+  }
+  
+  .text-with-heading {
+    width: calc(50% - 10px);
+    margin-bottom: 30px;
+    
+  }
+  
+  .text-with-heading__heading {
+    
+    margin-bottom: 10px;
+  }
+  
+  .text-with-heading__text {
+    
+    margin-bottom: 20px;
+  }
+  
+  .text-with-heading__link {
+    display: block;
+    color: #007aff;
+    
+    text-decoration: none;
+  }

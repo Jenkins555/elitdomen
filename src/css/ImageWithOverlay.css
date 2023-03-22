@@ -1,0 +1,473 @@
+.image-with-header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+    
+    
+  }
+  
+  .image-with-header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+    height: 100%;
+    /*background-image: url('your-image.jpg');
+    background-size: cover;
+    background-position: center;*/
+    z-index: -1;
+    /*-webkit-clip-path: polygon(0% 0%, 41% 0, 58% 52%, 39% 100%, 0% 100%);
+clip-path: polygon(0% 0%, 41% 0, 58% 52%, 39% 100%, 0% 100%);*/ 
+  }
+  
+  .image-with-header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+    transform-origin: right top;
+    transform: skewX(-15deg) translateX(50%);
+    opacity: 0;
+    animation: slideIn 1s forwards;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: skewX(-70deg) translateX(30%);
+      opacity: 0;
+    }
+    100% {
+      transform: skewX(-15deg) translateX(20%);
+      opacity: 1;
+    }
+  }
+  @keyframes slideIn2 {
+    0% {
+      
+      
+      opacity: 0;
+    }
+    100% {
+      
+      opacity: 1;
+    }
+  }
+
+  
+
+  .image-overlay {
+    position: absolute;
+    bottom:50%;
+    left: 0;
+    right: 50%; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .image_header {
+    position:absolute;
+    bottom: 70%;
+    left: 60%; 
+  }
+
+  .image-overlay h2 {
+    margin-bottom: 20rem;
+    text-align: center;
+  }
+  
+  .btn {
+    border: 1px solid  #0480fc;
+    transition: all 0.2s ease-in-out;
+    background-color: #0480fc;
+    opacity: 0.8;
+    color:#ffffff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  .btn:hover {
+    background-color: #0480fc;
+    color: #fff;
+    border: 1px solid  #ffffff;
+    opacity: 1;
+  }
+
+  /* Контент */
+.content {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(20%, -160%);
+  text-align: center;
+  z-index: 2;
+  animation: slideIn2 1s forwards;
+}
+
+/* Заголовок */
+.content h2 {
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+}
+
+/* Текст */
+.content_ul {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20%, 20%);
+  text-align: center;
+  z-index: 2;
+  color: rgb(21, 0, 255);
+  font-size: 1.5rem;
+  animation: slideIn2 1s forwards;
+}
+
+.content_ul li {
+margin-bottom: 3%;
+list-style-type: none;
+}
+ 
+  
+  @media (max-width: 1200px) {
+    .image-overlay {
+      padding: 10px;
+    }
+  
+    .image-overlay h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    .btn {
+      
+      padding: 5px 10px;
+    }
+
+    .image-with-header::before{
+      width: 60%;
+      transform: skewX(0deg) translateX(0%);
+    }
+
+      /* Изменяем размеры и расположение контента */
+   .content {
+    width: 50%;
+    top: 40%;
+    left: 55%;
+    transform: translate(-10%, -90%);
+   }
+
+  /* Изменяем размеры заголовка */
+   .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+   }
+
+  /* Изменяем размеры текста */
+   .content p {
+    font-size: 1rem;
+   }
+   .image-overlay {
+    
+    right: 50%;
+   }
+  }
+  
+  
+  @media (max-width: 900px) {
+    .image-overlay {
+      padding: 10px;
+    }
+  
+    .image-overlay h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    .btn {
+      
+      padding: 5px 10px;
+    }
+
+    .image-with-header::before{
+      width: 60%;
+      transform: skewX(0deg) translateX(0%);
+    }
+
+      /* Изменяем размеры и расположение контента */
+   .content {
+    width: 50%;
+    top: 40%;
+    left: 55%;
+    transform: translate(-10%, -90%);
+   }
+
+  /* Изменяем размеры заголовка */
+   .content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+   }
+
+  /* Изменяем размеры текста */
+   .content p {
+    font-size: 1rem;
+   }
+   .image-overlay {
+    
+    right: 60%;
+   }
+  
+  }
+ 
+  @media (max-width: 900px) {
+    .image-with-header{
+      height: 400px;
+    }
+    .image-overlay {
+      padding: 10px;
+    }
+  
+    .image-overlay h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .content_ul {
+      position:relative;
+      text-align: start;
+      width: 50%;
+      top: 45%;
+      left: 55%;
+      font-size: 0.4rem;
+    }
+
+    .content_ul a{
+      font-size: 1rem;
+    }
+  
+    .btn {
+      font-size: 1.1rem;;
+      padding: 5px 10px;
+    }
+
+    .image-with-header::before{
+      width: 60%;
+      transform: skewX(0deg) translateX(0%);
+    }
+
+      /* Изменяем размеры и расположение контента */
+   .content {
+    width: 50%;
+    top: 40%;
+    left: 55%;
+    transform: translate(-10%, -90%);
+   }
+
+  /* Изменяем размеры заголовка */
+   .content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+   }
+
+  /* Изменяем размеры текста */
+   .content p {
+    font-size: 1rem;
+   }
+   .image-overlay {
+    
+    right: 60%;
+   }
+  }
+
+
+  
+  @media (max-width: 700px) {
+    .image-with-header{
+      height: 400px;
+    }
+    .image-overlay {
+      padding: 10px;
+    }
+  
+    .image-overlay h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .content_ul {
+      position:relative;
+      text-align: start;
+      width: 50%;
+      top: 45%;
+      left: 50%;
+      font-size: 0.4rem;
+    }
+
+    .content_ul a{
+      font-size: 1rem;
+    }
+  
+    .btn {
+      font-size: 1.1rem;;
+      padding: 5px 10px;
+    }
+
+    .image-with-header::before{
+      width: 60%;
+      transform: skewX(0deg) translateX(0%);
+    }
+
+      /* Изменяем размеры и расположение контента */
+   .content {
+    width: 50%;
+    top: 40%;
+    left: 55%;
+    transform: translate(-10%, -90%);
+   }
+
+  /* Изменяем размеры заголовка */
+   .content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+   }
+
+  /* Изменяем размеры текста */
+   .content p {
+    font-size: 1rem;
+   }
+   .image-overlay {
+    
+    right: 60%;
+   }
+  }
+
+  @media (max-width: 500px) {
+    .image-with-header{
+      height: 300px;
+    }
+    .image-overlay {
+      padding: 10px;
+    }
+  
+    .image-overlay h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .content_ul {
+      position:relative;
+      text-align: start;
+      width: 50%;
+      top: 50%;
+      left: 50%;
+      font-size: 0.4rem;
+    }
+
+    .content_ul a{
+      font-size: 0.7rem;
+    }
+  
+    .btn {
+      font-size: 0.8rem;;
+      padding: 5px 10px;
+    }
+
+    .image-with-header::before{
+      width: 60%;
+      transform: skewX(0deg) translateX(0%);
+    }
+
+      /* Изменяем размеры и расположение контента */
+   .content {
+    width: 50%;
+    top: 40%;
+    left: 55%;
+    transform: translate(-10%, -90%);
+   }
+
+  /* Изменяем размеры заголовка */
+   .content h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+   }
+
+  /* Изменяем размеры текста */
+   .content p {
+    font-size: 1rem;
+   }
+   .image-overlay {
+    
+    right: 60%;
+   }
+  }
+
+  @media (max-width: 350px) {
+    .image-with-header{
+      height: 300px;
+    }
+    .image-overlay {
+      padding: 10px;
+    }
+  
+    .image-overlay h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .content_ul {
+      position:relative;
+      text-align: start;
+      width: 50%;
+      top: 50%;
+      left: 40%;
+      font-size: 0.4rem;
+    }
+
+    .content_ul a{
+      font-size: 0.5rem;
+    }
+  
+    .btn {
+      font-size: 0.5rem;;
+      padding: 5px 10px;
+    }
+
+    .image-with-header::before{
+      width: 60%;
+      transform: skewX(0deg) translateX(0%);
+    }
+
+      /* Изменяем размеры и расположение контента */
+   .content {
+    width: 50%;
+    top: 40%;
+    left: 55%;
+    transform: translate(-10%, -90%);
+   }
+
+  /* Изменяем размеры заголовка */
+   .content h2 {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+   }
+
+  /* Изменяем размеры текста */
+   .content p {
+    font-size: 1rem;
+   }
+   .image-overlay {
+    
+    right: 60%;
+   }
+  }
+ 
